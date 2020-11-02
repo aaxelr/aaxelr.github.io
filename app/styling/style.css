@@ -1,6 +1,27 @@
+/* Initialising margins and padding,  */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
 }
+
+/* Mobile first */
+header, footer {
+  background-color: azure;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Media Query - screens over 700px */
 
 /*# sourceMappingURL=style.css.map */
