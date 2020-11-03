@@ -18,6 +18,7 @@ $secondary-color: #33A0FF;
   font-family: 'Noto Sans JP', sans-serif;
   color: $text-color;
   letter-spacing: 0.05em;
+  text-shadow: 2px 2px #000;
 }
 
 body {
@@ -38,11 +39,7 @@ header {
 
     li {
       display: inline;
-      margin-right: 0.8em;
-    }
-
-    li:first-of-type {
-      margin-left: 0.8em;
+      margin-left: 1em;
     }
   }
 }
@@ -52,16 +49,16 @@ footer {
   @extend %ff7-menu;
 }
 
-
 a {
   text-decoration: none;
 }
 
 a:active {
-  text-shadow: #000;
+  text-shadow: 1px 1px #000;
 }
 
 h1 {
+  margin-top: 0.5em;
   padding: 0.5em;
   font-weight: 700;
 }
@@ -87,17 +84,15 @@ footer {
   }
 }
 
-
-
 .dialogue-box {
   @extend %ff7-menu;
   margin: 2em 1em;
 }
 
-.hidden {
+/* REMOVE COMMENT WHEN VIEWS ARE DONE */
+/* .hidden {
   display: none;
-}
-
+} */
 
 /* Media Query - screens over 600px */
 @media(min-width: 600px) {
