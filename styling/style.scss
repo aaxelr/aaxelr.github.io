@@ -3,6 +3,12 @@ $text-color: #FFF;
 $primary-color: #003070;
 $secondary-color: #33A0FF;
 
+/* Extends */
+%ff7-menu {
+  border: 3px solid #dddce1;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
+}
 
 /* Initialising margins and padding,  */
 * {
@@ -11,56 +17,82 @@ $secondary-color: #33A0FF;
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
   color: $text-color;
-  box-sizing: border-box;
+  letter-spacing: 0.05em;
 }
+
 body {
-  background-image: linear-gradient(180deg, $primary-color, $secondary-color);
-  
+  background-color: #000;
 }
 
 header {
-  border: 2px solid #dddce1;
-  border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  @extend %ff7-menu;
 
   ul {
+    @extend %ff7-menu;
     list-style: none;
     margin: 0 1em;
     padding: 0.5em 0;
-  
+    position: relative;
+    bottom: -1em;
+    z-index: 1;
+
     li {
       display: inline;
       margin-right: 0.8em;
     }
+
+    li:first-of-type {
+      margin-left: 0.8em;
+    }
   }
 }
 
-a {
-  text-decoration: none;
-  border: 2px solid #dddce1;
-  border-radius: 5px;
+main,
+footer {
+  @extend %ff7-menu;
 }
 
-h1,
-h2 {
-  padding: 0.5em;
 
+a {
+  text-decoration: none;
+}
+
+a:active {
+  text-shadow: #000;
+}
+
+h1 {
+  padding: 0.5em;
   font-weight: 700;
 }
 
 h2 {
   margin-top: 1em;
+  font-size: 1em;
+  margin: 0.5em 1em;
 }
 
 p {
-  margin: 0 1em 1em;;
+  margin: 0 1em 1em;
   font-size: 1em;
   text-align: justify;
   line-height: 1.5em;
+}
 
+footer {
+  padding: 1em 0;
+
+  p {
+    margin: 1em;
+  }
 }
 
 
+
+.dialogue-box {
+  @extend %ff7-menu;
+  margin: 2em 1em;
+}
 
 .hidden {
   display: none;
@@ -85,10 +117,10 @@ p {
 
   a {
     padding: 0.5em 1em;
-    color: $text-color ;
+    color: $text-color;
     transition: color 666ms, background-color 333ms ease-in-out;
   }
-  
+
   a:hover {
     background-color: #333;
     color: #eee;

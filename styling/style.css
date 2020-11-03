@@ -1,4 +1,12 @@
 /* Variables */
+/* Extends */
+.dialogue-box, main,
+footer, header ul, header {
+  border: 3px solid #dddce1;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
+}
+
 /* Initialising margins and padding,  */
 * {
   margin: 0;
@@ -6,42 +14,46 @@
   box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
-  box-sizing: border-box;
+  letter-spacing: 0.05em;
 }
 
 body {
-  background-image: linear-gradient(180deg, #003070, #33A0FF);
+  background-color: #000;
 }
 
-header {
-  border: 2px solid #dddce1;
-  border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
-}
 header ul {
   list-style: none;
   margin: 0 1em;
   padding: 0.5em 0;
+  position: relative;
+  bottom: -1em;
+  z-index: 1;
 }
 header ul li {
   display: inline;
   margin-right: 0.8em;
 }
+header ul li:first-of-type {
+  margin-left: 0.8em;
+}
 
 a {
   text-decoration: none;
-  border: 2px solid #dddce1;
-  border-radius: 5px;
 }
 
-h1,
-h2 {
+a:active {
+  text-shadow: #000;
+}
+
+h1 {
   padding: 0.5em;
   font-weight: 700;
 }
 
 h2 {
   margin-top: 1em;
+  font-size: 1em;
+  margin: 0.5em 1em;
 }
 
 p {
@@ -49,6 +61,17 @@ p {
   font-size: 1em;
   text-align: justify;
   line-height: 1.5em;
+}
+
+footer {
+  padding: 1em 0;
+}
+footer p {
+  margin: 1em;
+}
+
+.dialogue-box {
+  margin: 2em 1em;
 }
 
 .hidden {
