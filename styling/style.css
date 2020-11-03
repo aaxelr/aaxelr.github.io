@@ -2,11 +2,12 @@
 /* Extends */
 .dialogue-box, main,
 footer, header ul, header {
-  border: 3px solid #dddce1;
+  border: 3px solid #dddcee;
   border-radius: 5px;
   background-image: linear-gradient(135deg, #0000AA, #010127);
 }
 
+/* Mixins */
 /* Initialising margins and padding,  */
 * {
   margin: 0;
@@ -15,7 +16,7 @@ footer, header ul, header {
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
   letter-spacing: 0.05em;
-  text-shadow: 2px 2px #000;
+  text-shadow: 1px 1px 1px #000;
 }
 
 body {
@@ -39,10 +40,6 @@ a {
   text-decoration: none;
 }
 
-a:active {
-  text-shadow: 1px 1px #000;
-}
-
 h1 {
   margin-top: 0.5em;
   padding: 0.5em;
@@ -60,6 +57,10 @@ p {
   font-size: 1em;
   text-align: justify;
   line-height: 1.5em;
+}
+
+ul {
+  list-style: none;
 }
 
 footer {
@@ -97,11 +98,6 @@ footer p {
     padding: 0.5em 1em;
     color: #FFF;
     transition: color 666ms, background-color 333ms ease-in-out;
-  }
-
-  a:hover {
-    background-color: #333;
-    color: #eee;
   }
 }
 
