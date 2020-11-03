@@ -1,27 +1,86 @@
+/* Variables */
 /* Initialising margins and padding,  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
+  color: #FFF;
+  box-sizing: border-box;
 }
 
-/* Mobile first */
-header, footer {
-  background-color: azure;
+body {
+  background-image: linear-gradient(180deg, #003070, #33A0FF);
 }
 
-ul {
+header {
+  border: 2px solid #dddce1;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
+}
+header ul {
   list-style: none;
+  margin: 0 1em;
+  padding: 0.5em 0;
 }
-ul li {
+header ul li {
   display: inline;
+  margin-right: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  border: 2px solid #dddce1;
+  border-radius: 5px;
+}
+
+h1,
+h2 {
+  padding: 0.5em;
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 1em;
 }
 
 p {
+  margin: 0 1em 1em;
+  font-size: 1em;
   text-align: justify;
+  line-height: 1.5em;
 }
 
-/* Media Query - screens over 700px */
+.hidden {
+  display: none;
+}
+
+/* Media Query - screens over 600px */
+@media (min-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .grid-content {
+    grid-column: 2/4;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    padding: 0.5em 1em;
+    color: #FFF;
+    transition: color 666ms, background-color 333ms ease-in-out;
+  }
+
+  a:hover {
+    background-color: #333;
+    color: #eee;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
