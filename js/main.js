@@ -11,7 +11,7 @@ class Spa {
       portfolio: document.getElementById("portfolio-link"),
       about: document.getElementById("about-link"),
       contact: document.getElementById("contact-link"),
-    };
+    }
   }
 
   setupLinks() {
