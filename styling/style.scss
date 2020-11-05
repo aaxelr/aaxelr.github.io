@@ -1,31 +1,37 @@
 /* Variables */
 $text-color: #FFF;
+$bg-color: #000;
+$ff-blue: #0000AA;
+$ff-blue-fade: #010127;
 
 
 /* Mixins */
 @mixin ff7-menu {
   border: 3px solid #dddcee;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  background-image: linear-gradient(135deg, $ff-blue, $ff-blue-fade);
 }
 
-/* @mixin grid {
-  display: grid;
-} */
-
-/* Initialising margins and padding,  */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@mixin text {
   font-family: 'Noto Sans JP', sans-serif;
   color: $text-color;
   letter-spacing: 0.05em;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px $bg-color;
+}
+
+@mixin m-p-init {
+  margin: 0;
+  padding: 0;
+}
+
+/* Initialising margins and padding,  */
+* {
+  @include m-p-init;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
+  background-color: $bg-color;
 }
 
 header {
@@ -41,6 +47,7 @@ header {
     z-index: 1;
 
     li {
+      @include text;
       display: inline;
       margin-left: 1em;
     }
@@ -52,17 +59,24 @@ footer {
   @include ff7-menu;
 }
 
+main {
+  min-height: 100vh;
+}
+
 a {
+  @include text;
   text-decoration: none;
 }
 
 h1 {
+  @include text;
   margin-top: 0.5em;
   padding: 0.5em;
   font-weight: 700;
 }
 
 p {
+  @include text;
   margin: 0 1em 1em;
   font-size: 1em;
   text-align: justify;
@@ -71,7 +85,13 @@ p {
 
 ul {
   list-style: none;
+
+  li {
+    @include text;
+  }
 }
+
+
 
 footer {
   padding: 1em 0;
@@ -87,10 +107,11 @@ footer {
   padding: 0.2em 0.5em;
 
   h2 {
+    @include text;
     font-size: 1em;
     margin: 0;
   }
-  
+
   p {
     text-indent: -1em;
   }
@@ -99,6 +120,40 @@ footer {
 .hidden {
   display: none;
 }
+
+/*  */
+.portfolio-container {
+  @extend .dialogue-box;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+.portrait {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.info {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.portfolio-items {
+  @include m-p-init;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+  grid-area: 1 / 3 / 4 / 5;
+
+  .item {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
 
 /* Media Query - screens over 600px */
 @media(min-width: 600px) {
@@ -111,15 +166,9 @@ footer {
     grid-column: 2 / 4;
   }
 
+
   ul {
     display: flex;
     justify-content: space-around;
   }
-
-  a {
-    padding: 0.5em 1em;
-    color: $text-color;
-    transition: color 666ms, background-color 333ms ease-in-out;
-  }
-
 }
