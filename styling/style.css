@@ -1,13 +1,8 @@
 /* Variables */
-/* Extends */
-.dialogue-box, main,
-footer, header ul, header {
-  border: 3px solid #dddcee;
-  border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
-}
-
 /* Mixins */
+/* @mixin grid {
+  display: grid;
+} */
 /* Initialising margins and padding,  */
 * {
   margin: 0;
@@ -23,7 +18,15 @@ body {
   background-color: #000;
 }
 
+header {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
+}
 header ul {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
   list-style: none;
   margin: 0 1em;
   padding: 0.5em 0;
@@ -36,6 +39,13 @@ header ul li {
   margin-left: 1em;
 }
 
+main,
+footer {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
+}
+
 a {
   text-decoration: none;
 }
@@ -44,12 +54,6 @@ h1 {
   margin-top: 0.5em;
   padding: 0.5em;
   font-weight: 700;
-}
-
-h2 {
-  margin-top: 1em;
-  font-size: 1em;
-  margin: 0.5em 1em;
 }
 
 p {
@@ -71,7 +75,18 @@ footer p {
 }
 
 .dialogue-box {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010127);
   margin: 2em 1em;
+  padding: 0.2em 0.5em;
+}
+.dialogue-box h2 {
+  font-size: 1em;
+  margin: 0;
+}
+.dialogue-box p {
+  text-indent: -1em;
 }
 
 /* REMOVE COMMENT WHEN VIEWS ARE DONE */
