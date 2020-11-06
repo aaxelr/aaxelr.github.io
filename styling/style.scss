@@ -1,44 +1,21 @@
-/* Variables */
-$text-color: #FFF;
-$bg-color: #000;
-$ff-blue: #0000AA;
-$ff-blue-fade: #010127;
-
-
-/* Mixins */
-@mixin ff7-menu {
-  border: 3px solid #dddcee;
-  border-radius: 5px;
-  background-image: linear-gradient(135deg, $ff-blue, $ff-blue-fade);
-}
-
-@mixin text {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: $text-color;
-  letter-spacing: 0.05em;
-  text-shadow: 1px 1px 1px $bg-color;
-}
-
-@mixin m-p-init {
-  margin: 0;
-  padding: 0;
-}
+@use 'mixins';
+@use 'colors';
 
 /* Initialising margins and padding,  */
 * {
-  @include m-p-init;
+  @include mixins.m-p-init;
   box-sizing: border-box;
 }
 
 body {
-  background-color: $bg-color;
+  background-color: colors.$bg-color;
 }
 
 header {
-  @include ff7-menu;
+  @include mixins.ff7-menu;
 
   ul {
-    @include ff7-menu;
+    @include mixins.ff7-menu;
     list-style: none;
     margin: 0 1em;
     padding: 0.5em 0;
@@ -47,7 +24,7 @@ header {
     z-index: 1;
 
     li {
-      @include text;
+      @include mixins.text;
       display: inline;
       margin-left: 1em;
     }
@@ -56,7 +33,7 @@ header {
 
 main,
 footer {
-  @include ff7-menu;
+  @include mixins.ff7-menu;
 }
 
 main {
@@ -64,19 +41,20 @@ main {
 }
 
 a {
-  @include text;
+  @include mixins.text;
   text-decoration: none;
+  outline: 0;
 }
 
 h1 {
-  @include text;
+  @include mixins.text;
   margin-top: 0.5em;
   padding: 0.5em;
   font-weight: 700;
 }
 
 p {
-  @include text;
+  @include mixins.text;
   margin: 0 1em 1em;
   font-size: 1em;
   text-align: justify;
@@ -87,11 +65,9 @@ ul {
   list-style: none;
 
   li {
-    @include text;
+    @include mixins.text;
   }
 }
-
-
 
 footer {
   padding: 1em 0;
@@ -102,12 +78,12 @@ footer {
 }
 
 .dialogue-box {
-  @include ff7-menu;
+  @include mixins.ff7-menu;
   margin: 2em 1em;
   padding: 0.2em 0.5em;
 
   h2 {
-    @include text;
+    @include mixins.text;
     font-size: 1em;
     margin: 0;
   }
@@ -121,42 +97,16 @@ footer {
   display: none;
 }
 
-/*  */
-.portfolio-container {
-  @extend .dialogue-box;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-
-.portrait {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.info {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.portfolio-items {
-  @include m-p-init;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 1fr);
-  grid-area: 1 / 3 / 4 / 5;
-
-  .item {
-    grid-area: 1 / 1 / 2 / 2;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-
-
 /* Media Query - screens over 600px */
 @media(min-width: 600px) {
+
+  header,
+  main,
+  footer {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
@@ -171,4 +121,5 @@ footer {
     display: flex;
     justify-content: space-around;
   }
+
 }
