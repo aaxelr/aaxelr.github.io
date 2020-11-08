@@ -7,6 +7,21 @@
   box-sizing: border-box;
 }
 
+.outer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 8em minmax(28em, auto) 6em;
+}
+.outer-grid header {
+  grid-area: 1/2/2/3;
+}
+.outer-grid main {
+  grid-area: 2/2/3/3;
+}
+.outer-grid footer {
+  grid-area: 3/2/4/3;
+}
+
 body {
   background-color: #0F0F0F;
 }
@@ -14,18 +29,20 @@ body {
 header {
   border: 3px solid #dddcee;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  background-image: linear-gradient(135deg, #0000AA, #010130);
 }
 header ul {
   border: 3px solid #dddcee;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  background-image: linear-gradient(135deg, #0000AA, #010130);
   list-style: none;
   margin: 0 1em;
   padding: 0.5em 0;
   position: relative;
   bottom: -1em;
   z-index: 1;
+  display: flex;
+  justify-content: space-around;
 }
 header ul li {
   font-family: "Noto Sans JP", sans-serif;
@@ -33,18 +50,18 @@ header ul li {
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 1px #0F0F0F;
   display: inline;
-  margin-left: 1em;
+  /* margin-left: 1em; */
 }
 
 main,
 footer {
   border: 3px solid #dddcee;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  background-image: linear-gradient(135deg, #0000AA, #010130);
 }
 
 main {
-  min-height: 100vh;
+  height: auto;
 }
 
 a {
@@ -56,12 +73,21 @@ a {
   outline: 0;
 }
 
+/* add with JS to the a-element clicked */
+.acttive-view {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #0000AA, #010130);
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(135deg, #6E2090, #6D0E30);
+}
+
 h1 {
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 1px #0F0F0F;
-  margin-top: 0.5em;
   padding: 0.5em;
   font-weight: 700;
 }
@@ -97,7 +123,7 @@ footer p {
 .dialogue-box {
   border: 3px solid #dddcee;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010127);
+  background-image: linear-gradient(135deg, #0000AA, #010130);
   margin: 2em 1em;
   padding: 0.2em 0.5em;
 }
@@ -115,6 +141,18 @@ footer p {
 
 .hidden {
   display: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+.item span {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #FFF;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #0F0F0F;
+  margin: 0 1em;
 }
 
 /* Media Query - screens over 600px */
