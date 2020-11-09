@@ -81,6 +81,20 @@ main h3 {
   margin: 1em;
 }
 
+section {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr 5fr 0.5fr;
+}
+section .dialogue-box {
+  grid-area: 1/2/2/4;
+}
+section #profile-img {
+  display: none;
+}
+section article {
+  grid-area: 2/2/3/4;
+}
+
 a {
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
@@ -88,16 +102,6 @@ a {
   text-shadow: 1px 1px 1px #0F0F0F;
   text-decoration: none;
   outline: 0;
-}
-
-/* add with JS to the a-element clicked */
-.acttive-view {
-  border: 3px solid #dddcee;
-  border-radius: 5px;
-  background-image: linear-gradient(135deg, #0000AA, #010130);
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(135deg, #6E2090, #6D0E30);
 }
 
 h1 {
@@ -190,9 +194,24 @@ footer {
     grid-column: 2/4;
   }
 
+  section {
+    grid-template-columns: 0.5fr 3fr 5fr 0.5fr;
+  }
+  section #profile-img {
+    display: inline-block;
+    margin-left: 1em;
+    grid-area: 2/2/3/3;
+  }
+  section article {
+    grid-area: 2/3/3/4;
+  }
+  section #contact-article {
+    grid-area: 2/2/3/4;
+  }
+
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 

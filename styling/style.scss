@@ -76,18 +76,26 @@ main {
   }
 }
 
+section {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr 5fr 0.5fr;
+
+  .dialogue-box {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  #profile-img {
+    display: none;
+  }
+
+  article {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+}
+
 a {
   @include mixins.text;
   text-decoration: none;
   outline: 0;
-}
-
-/* add with JS to the a-element clicked */
-.acttive-view {
-  @include mixins.ff7-menu;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(135deg, colors.$ff-magenta, colors.$ff-magenta-fade);
 }
 
 h1 {
@@ -169,8 +177,24 @@ footer {
     grid-column: 2 / 4;
   }
 
+  section {
+    grid-template-columns: 0.5fr 3fr 5fr 0.5fr;
+
+    #profile-img {
+      display: inline-block;
+      margin-left: 1em;
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    article {
+      grid-area: 2 / 3 / 3 / 4;
+    }
+    #contact-article {
+      grid-area: 2 / 2 / 3 / 4;
+    }
+  }
+
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
