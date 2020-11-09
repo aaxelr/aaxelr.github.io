@@ -12,6 +12,12 @@ class Spa {
       about: document.getElementById("about-link"),
       contact: document.getElementById("contact-link"),
     }
+    this.pointers = {
+      home: document.getElementById("home-pointer"),
+      portfolio: document.getElementById("portfolio-pointer"),
+      about: document.getElementById("about-pointer"),
+      contact: document.getElementById("contact-pointer"),
+    }
   }
 
   setupLinks() {
@@ -19,7 +25,24 @@ class Spa {
       this.links[link].addEventListener("click", (e) => {
         let linkID = e.target.id;
         let viewToShow = linkID.slice(0, -5);
+        let pointerToShow = `${viewToShow}-pointer`;
         this.showView(viewToShow);
+        this.showPointer(pointerToShow);
+      });
+
+      this.links[link].addEventListener("mouseover", (e) => {
+        let linkID = e.target.id;
+        let pointerToShow = `${linkID.slice(0, -5)}-pointer`;
+        this.showPointer(pointerToShow);
+      });
+
+      this.links[link].addEventListener("mouseout", (e) => {
+        for (let view in this.views) {
+          if (this.views[view].classList != "hidden") {
+            let activeView = `${this.views[view].id}-pointer`;
+            this.showPointer(activeView);
+          }
+        }
       });
     }
   }
@@ -29,6 +52,15 @@ class Spa {
       this.views[view].classList.add("hidden");
       if (receivedView === view) {
         this.views[view].classList.remove("hidden");
+      }
+    }
+  }
+
+  showPointer(receivedPointer = "home-pointer") {
+    for (let pointer in this.pointers) {
+      this.pointers[pointer].classList.add("hidden");
+      if (receivedPointer === `${pointer}-pointer`) {
+        this.pointers[pointer].classList.remove("hidden");
       }
     }
   }
