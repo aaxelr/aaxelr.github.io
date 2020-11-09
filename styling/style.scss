@@ -51,6 +51,12 @@ header {
   }
 }
 
+.pointer {
+  width: 2rem;
+  margin-left: -2rem;
+  z-index: 1;
+}
+
 main,
 footer {
   @include mixins.ff7-menu;
