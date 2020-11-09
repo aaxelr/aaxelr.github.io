@@ -61,7 +61,18 @@ footer {
 }
 
 main {
-  height: auto;
+  min-height: calc(100vh - 14em);
+}
+main ul {
+  margin: 1em;
+}
+main h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #FFF;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #0F0F0F;
+  font-weight: 700;
+  margin: 1em;
 }
 
 a {
@@ -83,7 +94,7 @@ a {
   background-image: linear-gradient(135deg, #6E2090, #6D0E30);
 }
 
-h1, h3 {
+h1 {
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
   letter-spacing: 0.05em;
