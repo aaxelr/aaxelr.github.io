@@ -74,7 +74,7 @@ a {
   background-image: linear-gradient(135deg, colors.$ff-magenta, colors.$ff-magenta-fade);
 }
 
-h1 {
+h1, h3 {
   @include mixins.text;
   padding: 0.5em;
   font-weight: 700;
