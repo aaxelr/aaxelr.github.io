@@ -120,7 +120,6 @@ section#about {
   .portfolio-items {
     @include mixins.ff7-menu;
     grid-area: 2 / 2 / 3 / 4;
-    margin-bottom: 1em;
   }
 
   article {
@@ -214,8 +213,13 @@ footer {
     /* Profile picture in home view */
     #profile-img {
       display: inline-block;
-      margin-left: 1em;
+      margin-left: 4em;
       grid-area: 2 / 2 / 3 / 3;
+    }
+
+    /* Easter egg, move character to front row */
+    #profile-img:hover {
+      margin-left: 2em;
     }
 
     article {
@@ -237,6 +241,7 @@ footer {
 
     .portfolio-items {
       grid-area: 2 / 2 / 3 / 3;
+      margin: 0 1em 1em 1em;
     }
 
     article {
