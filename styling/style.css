@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Colors */
 /* Mixins */
 /* Initialising margins and padding, and setting box-sizing to border-box globally */
@@ -216,6 +217,11 @@ footer {
   }
   section #contact-article {
     grid-area: 2/2/3/4;
+    /* ev? pga förstoring av textstrl */
+  }
+  section #contact-article ul {
+    display: flex;
+    flex-direction: column;
   }
 
   /* Contact links in contact view*/

@@ -204,6 +204,12 @@ footer {
 
     #contact-article {
       grid-area: 2 / 2 / 3 / 4;
+
+      /* ev? pga förstoring av textstrl */
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 

@@ -83,3 +83,26 @@ skillnader mellan "normalfungerande" personer och personer med funktionsvariatio
 i dag när allt mer digitaliseras och mer av ens sociala och kulturella liv sker på nätet. 
   Det kan finnas svårigheter att anpassa mer konstnärligt orienterade webbsidor, där ett visuellt
 uttryck inte kan sättas ord på, eller av olika anledningar kan kompromissas med.
+
+
+###Tillgänglighetskrav###
+Jag har implementerat följande krav:
+1.1.1 Non-text Content
+  Jag har använt mig av alt-attributet i mina img-taggar.
+
+1.4.1 Use of Color
+  Jag använder inte färg för att förmedla information etc.
+
+1.4.3 Contrast (Minimum)
+  All text på sidan har tillräckligt hög kontrast mot bakgrunden.
+
+1.4.4 Resize text
+  All text är tillgänglig och läslig vid 200% zoom 
+  (funkar utan problem även vid 300% som är Firefox max-zoom)
+
+1.4.5 Images of Text
+  Inga bilder på text används.
+
+1.4.12 Text Spacing
+  Ingen text försvinner eller blir oläslig när jag testar med 
+  http://www.html5accessibility.com/tests/tsbookmarklet.html
