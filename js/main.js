@@ -8,11 +8,29 @@ class Spa {
       contact: document.getElementById("contact"),
     }
 
+    this.subViews = {
+      yahtzee: document.getElementById("yahtzee-article"),
+      quiz: document.getElementById("quiz-article"),
+      eventMgr: document.getElementById("eventMgr-article"),
+      me: document.getElementById("me-article"),
+      nacka: document.getElementById("nacka-article"),
+      other: document.getElementById("other-article"),
+    }
+
     this.links = {
       home: document.getElementById("home-link"),
       portfolio: document.getElementById("portfolio-link"),
       about: document.getElementById("about-link"),
       contact: document.getElementById("contact-link"),
+    }
+
+    this.subLinks = {
+      yahtzee: document.getElementById("yahtzee-link"),
+      quiz: document.getElementById("quiz-link"),
+      eventMgr: document.getElementById("eventMgr-link"),
+      me: document.getElementById("me-link"),
+      nacka: document.getElementById("nacka-link"),
+      other: document.getElementById("other-link"),
     }
 
     this.pointers = {
@@ -75,12 +93,39 @@ class Spa {
       }
     }
   }
+
+  // Setting up sub links. The if-statement makes sure I get the right
+  // ID even if I click on the span-tags inside the a-tag.
+  setupSubLinks() {
+    for (let subLink in this.subLinks) {
+      this.subLinks[subLink].addEventListener("click", (e) => {
+        let linkID = e.target.id;
+        if (linkID === "") {
+          linkID = e.target.parentNode.id;
+        }
+        let subViewToShow = linkID.slice(0, -5);
+        this.showSubView(subViewToShow);
+      });
+    }
+  }
+
+  // Hiding all sub views, showing the one clicked.
+  showSubView(receivedSubView) {
+    for (let subView in this.subViews) {
+      this.subViews[subView].classList.add("hidden");
+      if (receivedSubView === subView) {
+        this.subViews[subView].classList.remove("hidden");
+      }
+    }
+  }
 }
 
-// Creating new Spa object when DOM is loaded.
+// Creating new Spa object and setting up links when DOM is loaded.
 document.addEventListener("DOMContentLoaded", () => {
   console.log("A A R ©MMXX");
   console.log("Final Portfolio VII...");
   const mySpa = new Spa();
+  mySpa.setupSubLinks();
   mySpa.setupLinks();
+  console.log("Kupo!");
 });
