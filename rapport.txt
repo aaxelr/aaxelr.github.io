@@ -1,0 +1,85 @@
+###Scrum###
+Scrum är en agil utvecklingsmetod vilket betyder att den förhåller sig till det agila manifestet
+(http://agilemanifesto.org/iso/sv/manifesto.html). Det innebär att man värdesätter:
+  individer och interaktioner framför processer och verktyg,
+  fungerande programvara framför omfattande dokumentation,
+  kundsamarbete framför kontraktsförhandling, och
+  anpassning till förändring framför att följa en plan.
+
+  Scrummetoden bygger på tre komponenter: artefakter, scrumlaget och event. Artefakterna utgörs av
+Product Backlog (PB), som är en detaljerad och rangordnad kravspecifikation över produkten,
+Sprint Backlog (SB), som är en att göra-lista innehållandes upp till fem punkter från PB som 
+utvecklarna ska ta sig an under den aktuella Sprint:en (arbetsperioden), och Increment, som är 
+resultatet av den senaste Sprint:en.
+  Scrumlaget är de personer som jobbar med projektet. De består av en produktägare (PO), en Scrum
+Master (SM) och ett utvecklarlag (DT). PO är kundens representant. Hen bestämmer och rangordnar 
+innehållet i PB och ansvarar för att varje punkt i PB är tydlig. SMs roll är att coacha Scrumlaget
+och undanröja hinder för DT, t ex genom att se till att de får jobba ostört utan "onödiga" möten, 
+så de kan leverera på topp. SM ser också till att hela Scrumlaget är införstådda med PB-punkterna.
+DT syftar på alla som är med och gör projektet bättre, dvs inte bara utvecklare utan mer allmänt.
+DT är helst mellan tre och nio personer och de organiserar sig själva för att kunna arbeta så
+effektivt som möjligt.
+  I ett Scrum-projekt så hålls ett antal Event. För varje Sprint, som är en kortare arbetsperiod
+på tre till 30 dagar, hålls först en Sprint-planering där hela Scrumlaget deltar. Tillsammans 
+kommer man fram till vad man ska göra under den aktuella sprinten. Under sprinten hålls dagliga 
+möten kallade Daily Scrum där DT och oftast SM deltar. På mötena, som ofta hålls stående och är
+max 15 minuter långa för hållas effektiva, går DT och SM igenom vad de gjort sedan igår, vad de 
+ska göra till i morgon och om det finns några eventuella hinder. De här dagliga mötena gör att 
+alla hålls uppdaterade om hur det går i projektet och förhindrar att saker skjuts upp eftersom
+utvecklarlaget kan hjälpas åt lösa hinder som tas upp. När en Sprint är över hålls en Sprint 
+Review där hela Scrumlaget samt intressenter deltar. Under Sprint Review går Scrumlaget igenom 
+och, om möjligt, demonstrerar senaste sprintens resultat. Här finns möjlighet att få feedback 
+från intressenterna för att kunna få fler perspektiv på produkten för att förhoppningsvis kunna
+göra den ännu bättre. PO går sedan igenom framtidsplaner och uppdaterar PB med eventuella nya krav.
+Efter Sprint Review hålls en Sprint Retrospective där Scrumlaget analyserar hur Sprint:en har gått,
+vad som har fungerat bra och vad som kan förbättras till nästa sprint.
+  Att jobba med Scrum har flera fördelar. Det gör det t ex lätt för Scrumlaget att anspassa sig 
+till förändring, eftersom man hela tiden jobbar i Sprint:ar utefter tydliga SB och får kontinuerlig
+återkoppling från PO och intressenter. Ändras kraven så ändras PB och så även SB. Man jobbar alltså
+med Sprint:ens alla delmål istället för med en mer oöverskådlig och kanske vag målbild av en 
+slutprodukt. För företaget blir det "tryggare" eftersom de hela tiden får se delresultat som de
+kan ge feedback på och påverka, istället för att ha satsat x summa pengar för att långt senare få
+se en "färdig" produkt. För utvecklarna är det i flesta fall positivt att de får organisera sitt
+arbete själva, men den friheten kan också leda till svårigheter om de inte är vana vid att ta 
+ansvar. Det är dock något som i idealfall skulle tas upp på ett Daily Scrum-möte, där personen
+skulle kunna få tips och stöd från sina kollegor.
+
+
+###Grafisk profil###
+En grafisk profil innehåller grafiska element (t ex logotyp), typsnitt och färguppsättningar
+samt regler för hur dessa ska användas för att presentera en organisation på ett enhetligt och 
+uniformt sätt. En grafisk profil bör hållas kortfattad och visuellt tydlig, dvs innehålla tydliga
+exempel på exempelvis placering av logotyp, brödtextmarginaler, etc, för att vara så lättanvänd
+som möjligt.
+  Som utvecklare underlättas arbetet av en tydlig grafisk profil, för att inte behöva gissa sig
+till var man ska placera logotyp, vilket typsnitt man ska använda osv. Det går dessutom snabbare
+att komma fram till ett designförslag på t ex en hemsida som ligger i linje med beställarens idé.
+Svårigheter att arbeta med en kunds grafisk profil kan vara om den är väldigt utförlig med många
+regler på detaljnivå. Det kan leda till att värdefull utvecklingstid går åt till att läsa, förstå 
+och implementera regler. Fast å andra sidan, om kunden är så mån om sin grafiska profil betalar 
+de säkert för att den ska följas nitiskt.
+
+
+###Tillgänglighet###
+Tillgänglighet i webbdesign handlar om att göra produkten tillänglig för så många som möjligt.
+De rådande tillgänglighetsanvnisningarna kallas WCAG (Web Content Accessibility Guidelines) och
+sammanställs av W3C (World Web Consortium).
+  För ett vanligt företag kan det handla om att göra kundundersökningar för att göra webbinnehållet
+tillgängligt för just sin målgrupp, medan en myndighet har lagliga krav på sig att göra webbsidan 
+tillgänglig för alla, oavsett förutsättningar, så långt det är möjligt. Grundläggande kan det 
+t ex handla om att ha tillräcklig kontrast mellan text och bakgrund samt ha alternativa beskrivningar
+av visuellt innehåll som bilder och video (genom att använda alt-attribut i de berörda HTML-taggarna).
+En myndighet med sina högre krav måste också i större utsträckning se till att funktion går före form.
+Det kan t ex vara att ha tydliga etiketter (label-taggar) till HTML-formulär, att se till att 
+navigation med hjälp av tab-tangenten fungerar logiskt. Därtill är det viktigt att se till att video
+och ljudklipp, om de startar automatiskt, inte spelar upp ljud. Det är störande för alla, men
+framförallt för personer som använder sig av skärmläsare, ett hjälpmedelsverktyg som läser upp 
+innehållet på webbsidan och som då krockar med ljud från video- eller ljudelement.
+  Den självklara fördelen med att arbeta med tillgänglighet och följa WCAG är att ge så många som 
+möjligt tillgång till webben. Nackdelen är att det tar tid och därmed kostar pengar, vilket kan
+leda till att företag och organisationer utan explicita krav på tillgänglighet inte prioriterar
+(läs: struntar i) att arbeta inkluderande och därmed upprätthåller och i värsta fall förstärker
+skillnader mellan "normalfungerande" personer och personer med funktionsvariationer. Särskilt
+i dag när allt mer digitaliseras och mer av ens sociala och kulturella liv sker på nätet. 
+  Det kan finnas svårigheter att anpassa mer konstnärligt orienterade webbsidor, där ett visuellt
+uttryck inte kan sättas ord på, eller av olika anledningar kan kompromissas med.
