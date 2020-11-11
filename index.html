@@ -14,6 +14,7 @@
 
 <body class="outer-grid">
 
+  <!-- Header -->
   <header class="grid">
     <div class="grid-content">
       <h1><img src="pics/pointer.png" class="pointer" id="home-pointer" alt="pointer pointing on home-link"><a href="#"
@@ -33,6 +34,8 @@
 
   <main class="grid">
     <div class="grid-content">
+
+      <!-- Home view -->
       <section id="home">
         <div class="dialogue-box">
           <h2>Name</h2>
@@ -40,9 +43,10 @@
             "Hi. My name is Name and I'm studying Full Stack Web Developer at Nackademin in Stockholm, Sweden."
           </p>
         </div>
+
         <img src="pics/placeholder.jpg" alt="placeholder" id="profile-img">
+
         <article id="home-article">
-          <!-- use grid, add an id -->
           <p>
             This is my portfolio created as a school assignment. I've tried to recreate the menu design from the Square
             game Final Fantasy VII, released for the Sony PlayStation in 1997.
@@ -54,6 +58,7 @@
         </article>
       </section>
 
+      <!-- Portfolio view -->
       <section id="portfolio" class="hidden">
         <div class="dialogue-box">
           <h2>Name</h2>
@@ -63,6 +68,28 @@
             "
           </p>
         </div>
+
+        <div class="portfolio-items">
+          <div class="item">
+            <a href="#" class="artc" id="yahtzee-link">
+              <span>Yahtzee</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+          <div class="item">
+           <a href="#" class="artc" id="quiz-link">
+              <span>Quiz</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="artc" id="eventmgr-link">
+              <span>Event Manager</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+        </div>
+
         <article id="portfolio-article">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero enim porro odio debitis minima voluptatum
@@ -73,27 +100,9 @@
             elit. Iure explicabo nam beatae.
           </p>
         </article>
-        <!-- <div class="portfolio-content">
-          <div class="portfolio-items">
-            <div class="item">
-              <span>Yatzy</span>
-              <span>: 1</span>
-              <br><br>
-              <p>We made a basic Yahtzee game Lorem ipsu</p>
-            </div>
-            <div class="item">
-              <span>Quiz</span>
-              <span>: 2</span>
-            </div>
-            <div class="item">
-              <span>Event Manager</span>
-              <span>: 3</span>
-            </div>
-          </div>
-
-        </div> -->
       </section>
 
+      <!-- About view -->
       <section id="about" class="hidden">
         <div class="dialogue-box">
           <h2>Name</h2>
@@ -102,77 +111,73 @@
             For information about Nackademin's Full Stack Web Developer program, click on Nackademin."
           </p>
         </div>
-        <article id="about-article">
+
+        <div class="portfolio-items">
+          <div class="item">
+            <a href="#" class="artc" id="me-link">
+              <span>Me</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="artc" id="eventmgr-link">
+              <span>Nackademin</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="artc" id="eventmgr-link">
+              <span>Other</span>
+              <span>:&nbsp;1</span>
+            </a>
+          </div>
+        </div>
+
+        <article class="article-grid" id="me-article">
+          <h3>Me</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus natus, ratione neque corrupti repudiandae
-            necessitatibus ut sint temporibus vel, optio accusamus vitae aperiam repellat omnis ad nemo? Inventore
-            dignissimos ipsa molestiae reprehenderit nam hic minus dolorum repellat, iusto non saepe asperiores incidunt
-            cumque voluptas praesentium expedita! Sed similique itaque repellat facere recusandae adipisci at minima
-            perspiciatis deleniti omnis? Tempore rem incidunt illum praesentium, sit asperiores dolores perferendis
-            autem earum.
+            Lorem labore reiciendis aut ut? Incidunt
+            eveniet illo nulla exercitationem culpa placeat commodi obcaecati
+            excepturi, est itaque officia doloremque delectus aspernatur impedit, numquam voluptatem blanditiis
+            ducimus?
+            Aperiam
+            temporibus dolorem nobis velit, ex sapiente eligendi molestiae earum possimus."
           </p>
-
-          <!-- <div class="portfolio-items">
-          <div class="item">
-            <span>Me</span>
-            <span>: 1</span>
-          </div>
-          <div class="item">
-            <span>Nackademin</span>
-            <span>: 1</span>
-          </div>
-          <div class="item">
-            <span>Other</span>
-            <span>: 1</span>
-          </div>
-        </div> -->
-
-          <article class="article-grid" id="me-article">
-            <h3>Me</h3>
-            <p>
-              Lorem labore reiciendis aut ut? Incidunt
-              eveniet illo nulla exercitationem culpa placeat commodi obcaecati
-              excepturi, est itaque officia doloremque delectus aspernatur impedit, numquam voluptatem blanditiis
-              ducimus?
-              Aperiam
-              temporibus dolorem nobis velit, ex sapiente eligendi molestiae earum possimus."
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
-              asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
-            </p>
-          </article>
-
-          <article class="article-grid hidden" id="nacka-article">
-            <h3>Nackademin</h3>
-            <p>
-              The
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
-              asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
-            </p>
-          </article>
-
-          <article class="article-grid hidden" id="other-article">
-            <h3>Other</h3>
-            <p>
-              Lorem labore reiciendis aut ut? Incidunt
-              eveniet illo nulla exercitationem culpa placeat commodi obcaecati
-              excepturi, est itaque officia doloremque delectus aspernatur impedit, numquam voluptatem blanditiis
-              ducimus?
-              Aperiam
-              temporibus dolorem nobis velit, ex sapiente eligendi molestiae earum possimus."
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
-              asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
-            </p>
-          </article>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
+            asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
+          </p>
         </article>
 
+        <article class="article-grid hidden" id="nacka-article">
+          <h3>Nackademin</h3>
+          <p>
+            The
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
+            asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
+          </p>
+        </article>
+
+        <article class="article-grid hidden" id="other-article">
+          <h3>Other</h3>
+          <p>
+            Lorem labore reiciendis aut ut? Incidunt
+            eveniet illo nulla exercitationem culpa placeat commodi obcaecati
+            excepturi, est itaque officia doloremque delectus aspernatur impedit, numquam voluptatem blanditiis
+            ducimus?
+            Aperiam
+            temporibus dolorem nobis velit, ex sapiente eligendi molestiae earum possimus."
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
+            asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
+          </p>
+        </article>
       </section>
 
+      <!-- Contact view -->
       <section id="contact" class="hidden">
         <div class="dialogue-box">
           <h2>Name</h2>
@@ -183,8 +188,9 @@
         <article id="contact-article">
           <ul>
             <li>E-Mail Address</li>
-            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-            <li><a href="https://github.com/aaxelr">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/antonio-axelsson-rodriguez-7133481b4/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/aaxelr" target="_blank" rel="noreferrer noopener">GitHub</a></li>
           </ul>
         </article>
       </section>

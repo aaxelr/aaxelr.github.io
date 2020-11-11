@@ -114,6 +114,20 @@ section {
   }
 }
 
+section#portfolio,
+section#about {
+
+  .portfolio-items {
+    @include mixins.ff7-menu;
+    grid-area: 2 / 2 / 3 / 4;
+    margin-bottom: 1em;
+  }
+
+  article {
+    grid-area: 3 / 2 / 4 / 4;
+  }
+}
+
 /* Anchor link styling */
 a {
   @include mixins.text;
@@ -157,14 +171,20 @@ footer {
   display: none;
 }
 
-/* Currently commented out in HTML */
 .item {
-  display: flex;
-  justify-content: space-between;
+  .article-pointer {
+    @extend .pointer;
+    width: 2rem;
+  }
 
-  span {
-    @include mixins.text;
-    margin: 0 1em;
+  .artc {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      @include mixins.text;
+      margin: 0.1em 1em;
+    }
   }
 }
 
@@ -205,12 +225,24 @@ footer {
     #contact-article {
       grid-area: 2 / 2 / 3 / 4;
 
-      /* ev? pga förstoring av textstrl */
       ul {
         display: flex;
         flex-direction: column;
       }
     }
+  }
+
+  section#portfolio,
+  section#about {
+
+    .portfolio-items {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    article {
+      grid-area: 2 / 3 / 4 / 4;
+    }
+
   }
 
   /* Contact links in contact view*/
@@ -219,13 +251,13 @@ footer {
     justify-content: space-between;
   }
 
-  footer > div {
+  footer>div {
     transition: font-size 1337ms;
   }
 
-  footer > div:hover {
+  footer>div:hover {
     font-size: 1.3em;
-    @include mixins.m-p-init; 
+    @include mixins.m-p-init;
 
     p {
       margin-bottom: 0;
