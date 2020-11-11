@@ -1,16 +1,17 @@
 @use 'mixins';
 @use 'colors';
 
-/* Initialising margins and padding,  */
+/* Initialising margins and padding, and setting box-sizing to border-box globally */
 * {
   @include mixins.m-p-init;
   box-sizing: border-box;
 }
 
+/* Grid to place header, main and footer */
 .outer-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 8em minmax(28em, auto) 6em;
+  grid-template-rows: 8em minmax(5em, auto) 6em;
 
   header {
     grid-area: 1 / 2 / 2 / 3;
@@ -25,13 +26,16 @@
   }
 }
 
+
 body {
   background-color: colors.$bg-color;
 }
 
+/* Header */
 header {
   @include mixins.ff7-menu;
 
+  /* Navbar */
   ul {
     @include mixins.ff7-menu;
     list-style: none;
@@ -45,24 +49,26 @@ header {
 
     li {
       @include mixins.text;
-      display: inline;
-      /* margin-left: 1em; */
     }
   }
 }
 
+/* Indicates active view or hovered link */
 .pointer {
   width: 2rem;
   margin-left: -2rem;
   z-index: 1;
 }
 
+
 main,
 footer {
   @include mixins.ff7-menu;
 }
 
+/* Main */
 main {
+  /* Sets main part to fill up space between header and footer */
   min-height: calc(100vh - 14em);
 
   ul {
@@ -76,13 +82,29 @@ main {
   }
 }
 
+/* The active view */
 section {
   display: grid;
   grid-template-columns: 0.5fr 5fr 5fr 0.5fr;
 
   .dialogue-box {
     grid-area: 1 / 2 / 2 / 4;
+    @include mixins.ff7-menu;
+    margin: 2em 1em;
+    padding: 0.2em 0.5em;
+
+    h2 {
+      @include mixins.text;
+      font-size: 1em;
+      margin: 0;
+    }
+
+    p {
+      text-indent: -1em;
+    }
   }
+
+  /* Hides profile image in mobile view */
   #profile-img {
     display: none;
   }
@@ -92,6 +114,7 @@ section {
   }
 }
 
+/* Anchor link styling */
 a {
   @include mixins.text;
   text-decoration: none;
@@ -120,6 +143,7 @@ ul {
   }
 }
 
+/* Footer */
 footer {
   padding: 1em 0;
 
@@ -128,26 +152,12 @@ footer {
   }
 }
 
-.dialogue-box {
-  @include mixins.ff7-menu;
-  margin: 2em 1em;
-  padding: 0.2em 0.5em;
-
-  h2 {
-    @include mixins.text;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  p {
-    text-indent: -1em;
-  }
-}
-
+/* Used for inactive views */
 .hidden {
   display: none;
 }
 
+/* Currently commented out in HTML */
 .item {
   display: flex;
   justify-content: space-between;
@@ -161,6 +171,7 @@ footer {
 /* Media Query - screens over 600px */
 @media(min-width: 600px) {
 
+  /* Setting max-width */
   header,
   main,
   footer {
@@ -180,21 +191,40 @@ footer {
   section {
     grid-template-columns: 0.5fr 3fr 5fr 0.5fr;
 
+    /* Profile picture in home view */
     #profile-img {
       display: inline-block;
       margin-left: 1em;
       grid-area: 2 / 2 / 3 / 3;
     }
+
     article {
       grid-area: 2 / 3 / 3 / 4;
     }
+
     #contact-article {
       grid-area: 2 / 2 / 3 / 4;
     }
   }
 
+  /* Contact links in contact view*/
   ul {
     display: flex;
     justify-content: space-between;
   }
+
+  footer > div {
+    transition: font-size 1337ms;
+  }
+
+  footer > div:hover {
+    font-size: 1.3em;
+    @include mixins.m-p-init; 
+
+    p {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
 }
