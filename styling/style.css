@@ -1,4 +1,7 @@
 /* Colors */
+/* Text and background colors */
+/* Main color theme */
+/* Alt. color theme for sub-view h3's */
 /* Mixins */
 /* Initialising margins and padding, and setting box-sizing to border-box globally */
 * {
@@ -55,7 +58,7 @@ header ul li {
 }
 
 /* Indicates active view or hovered link */
-.pointer, .item .article-pointer {
+.pointer {
   width: 2rem;
   margin-left: -2rem;
   z-index: 1;
@@ -77,11 +80,15 @@ main ul {
   margin: 1em;
 }
 main h3 {
+  border: 3px solid #dddcee;
+  border-radius: 5px;
+  background-image: linear-gradient(175deg, #0000AA, #010130);
+  background-image: linear-gradient(175deg, #6E2090, #6D0E30);
   font-family: "Noto Sans JP", sans-serif;
   color: #FFF;
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 1px #0F0F0F;
-  font-weight: 700;
+  padding: 0.5em;
   margin: 1em;
 }
 
@@ -116,6 +123,9 @@ section #profile-img {
 section article {
   grid-area: 2/2/3/4;
 }
+section article p:last-of-type {
+  margin-bottom: 2em;
+}
 
 section#portfolio .portfolio-items,
 section#about .portfolio-items {
@@ -123,6 +133,20 @@ section#about .portfolio-items {
   border-radius: 5px;
   background-image: linear-gradient(175deg, #0000AA, #010130);
   grid-area: 2/2/3/4;
+  padding: 0.5em 0;
+}
+section#portfolio .portfolio-items .item .artc,
+section#about .portfolio-items .item .artc {
+  display: flex;
+  justify-content: space-between;
+}
+section#portfolio .portfolio-items .item .artc span,
+section#about .portfolio-items .item .artc span {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #FFF;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #0F0F0F;
+  margin: 0 0.5em;
 }
 section#portfolio article,
 section#about article {
@@ -182,21 +206,6 @@ footer p {
   display: none;
 }
 
-.item .article-pointer {
-  width: 2rem;
-}
-.item .artc {
-  display: flex;
-  justify-content: space-between;
-}
-.item .artc span {
-  font-family: "Noto Sans JP", sans-serif;
-  color: #FFF;
-  letter-spacing: 0.05em;
-  text-shadow: 1px 1px 1px #0F0F0F;
-  margin: 0.1em 1em;
-}
-
 /* Media Query - screens over 600px */
 @media (min-width: 600px) {
   /* Setting max-width */
@@ -232,12 +241,15 @@ footer {
   section article {
     grid-area: 2/3/3/4;
   }
+  section article h3 {
+    margin: 0 1em 1em;
+  }
   section #contact-article {
     grid-area: 2/2/3/4;
   }
   section #contact-article ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   section#portfolio .portfolio-items,
