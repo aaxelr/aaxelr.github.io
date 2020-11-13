@@ -14,7 +14,6 @@ class Spa {
       eventMgr: document.getElementById("eventMgr-article"),
       me: document.getElementById("me-article"),
       nacka: document.getElementById("nacka-article"),
-      other: document.getElementById("other-article"),
     }
 
     this.links = {
@@ -30,7 +29,6 @@ class Spa {
       eventMgr: document.getElementById("eventMgr-link"),
       me: document.getElementById("me-link"),
       nacka: document.getElementById("nacka-link"),
-      other: document.getElementById("other-link"),
     }
 
     this.pointers = {
@@ -121,6 +119,7 @@ class Spa {
 }
 
 // Creating new Spa object and setting up links when DOM is loaded.
+// Logging "Kupo!" when setup is done.
 document.addEventListener("DOMContentLoaded", () => {
   console.log("A A R ©MMXX");
   console.log("Final Portfolio VII...");

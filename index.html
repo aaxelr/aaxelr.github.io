@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head including imported font, favicons and of course stylesheet -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +14,15 @@
   <title>A A R</title>
 </head>
 
+<!-- Grid used for placement of Header, Main and Footer -->
+
 <body class="outer-grid">
 
   <!-- Header -->
   <header class="grid">
     <div class="grid-content">
       <h1><img src="pics/pointer.png" class="pointer" id="home-pointer" alt="pointer pointing on home-link"><a href="#"
-          class="link" id="home-link">A A R</a></h1>
+          class="link" id="home-link">Antonio A R</a></h1>
       <nav class="grid">
         <ul class="grid-content">
           <li><img src="pics/pointer.png" class="pointer hidden" id="portfolio-pointer"
@@ -38,9 +42,9 @@
       <!-- Home view -->
       <section id="home">
         <div class="dialogue-box">
-          <h2>Name</h2>
+          <h2>Antonio</h2>
           <p>
-            "Hi. My name is Name and I'm studying Full Stack Web Development at Nackademin in Stockholm, Sweden."
+            "Hi. My name is Antonio and I'm studying Full Stack Web Development at Nackademin in Stockholm, Sweden."
           </p>
         </div>
 
@@ -55,7 +59,7 @@
             The picture shown here is a placeholder image I'm using until my friend sends me a portrait of me that he
             made...
           </p>
-          <p>Oh, by the way! I've tried to make this page as accessible as possible by following (at least some of the)
+          <p>Oh, by the way! I've tried to make this page as accessible as possible by following (at least some of)
             the W3C Web Content
             Accessibility Guidelines, <a href="https://www.w3.org/TR/WCAG21/" target="_blank"
               rel="noreferrer noopener">WCAC</a>.</p>
@@ -65,14 +69,15 @@
       <!-- Portfolio view -->
       <section id="portfolio" class="hidden">
         <div class="dialogue-box">
-          <h2>Name</h2>
+          <h2>Antonio</h2>
           <p>
             "Here are a few things I've done since I started learning JS, HTML and CSS in September
             2020.<br>...<br>Click on
-            the items in the inventory to read about them."
+            the items in the inventory box below to read about them."
           </p>
         </div>
 
+        <!-- Sub links - portfolio -->
         <div class="portfolio-items">
           <div class="item">
             <a href="#yahtzee-article" class="artc" id="yahtzee-link">
@@ -88,12 +93,13 @@
           </div>
           <div class="item">
             <a href="#eventMgr-article" class="artc" id="eventMgr-link">
-              <span>Event Manager</span>
+              <span>Event&nbsp;Manager</span>
               <span>:&nbsp;1</span>
             </a>
           </div>
         </div>
 
+        <!-- Sub views - portfolio -->
         <article class="article-grid" id="yahtzee-article">
           <h3>Yahtzee</h3>
           <p>
@@ -140,13 +146,14 @@
       <!-- About view -->
       <section id="about" class="hidden">
         <div class="dialogue-box">
-          <h2>Name</h2>
+          <h2>Antonio</h2>
           <p>
             "Click on Me below to read more about me.<br>
             For information about Nackademin's Full Stack Web Developer program, click on Nackademin."
           </p>
         </div>
 
+        <!-- Sub links - about -->
         <div class="portfolio-items">
           <div class="item">
             <a href="#me-article" class="artc" id="me-link">
@@ -160,19 +167,13 @@
               <span>:&nbsp;1</span>
             </a>
           </div>
-          <div class="item">
-            <a href="#other-article" class="artc" id="other-link">
-              <span>Other</span>
-              <span>:&nbsp;1</span>
-            </a>
-          </div>
         </div>
 
+        <!-- Sub views - about -->
         <article class="article-grid" id="me-article">
           <h3>Me</h3>
           <p>
-            Me name is Name. Well, not really, but I don't to have my name here just yet. I live in Stockholm,
-            Sweden.
+            Me name is Antonio. I live in Stockholm, Sweden.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ad qui sapiente excepturi, est itaque officia
             doloremque delectus aspernatur impedit, numquam voluptatem blanditiis
             ducimus?
@@ -180,8 +181,16 @@
             temporibus dolorem nobis velit, ex sapiente eligendi molestiae earum possimus."
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae officia incidunt minus at magnam pariatur
-            asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
+            I like creating sounds and soundscapes with synthesizers and drum machines.
+          </p>
+          <p>
+            I've also studied Japanese and Mandarin Chinese.
+          </p>
+          <p lang="ja">
+            はじめまして。闇冬です。どうぞよろしく。
+          </p>
+          <p lang="cmn">
+            大家好！我叫冬冬。
           </p>
         </article>
 
@@ -198,22 +207,12 @@
             asperiores soluta voluptate dolorum cumque, delectus perspiciatis sed.
           </p>
         </article>
-
-        <article class="article-grid hidden" id="other-article">
-          <h3>Other</h3>
-          <p lang="ja">
-            はじめまして。これからどうぞよろしくお願いします〜
-          </p>
-          <p lang="cmn">
-            大家好！我要努力学习。
-          </p>
-        </article>
       </section>
 
       <!-- Contact view -->
       <section id="contact" class="hidden">
         <div class="dialogue-box">
-          <h2>Name</h2>
+          <h2>Antonio</h2>
           <p>
             "You can contact me through my e-mail address, or find me on LinkedIn..."
           </p>
@@ -232,13 +231,14 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="grid">
     <div class="grid-content">
       <p>A A R &copy;MMXX</p>
     </div>
   </footer>
 
-
+  <!-- Main script -->
   <script src="/js/main.js"></script>
 </body>
 
