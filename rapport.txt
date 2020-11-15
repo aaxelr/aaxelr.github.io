@@ -98,11 +98,25 @@ Jag har implementerat följande krav:
 
 1.4.4 Resize text
   All text är tillgänglig och läslig vid 200% zoom 
-  (funkar utan problem även vid 300% som är Firefox max-zoom)
+  (funkar utan problem även vid 300% som är Firefox max-zoom).
 
 1.4.5 Images of Text
   Inga bilder på text används.
 
 1.4.12 Text Spacing
   Ingen text försvinner eller blir oläslig när jag testar med 
-  http://www.html5accessibility.com/tests/tsbookmarklet.html
+  http://www.html5accessibility.com/tests/tsbookmarklet.html.
+
+2.4.2 Page Titled
+  Varje view har en egen page-title (titeln som syns på tabben eller fönstret),
+
+3.1.1 Language of Page
+  HTML-taggen har språkattributet lang="en".
+
+ 3.1.2 Language of Parts
+  De två html med annat språkinnehåll är taggade med sina respektive språk (ja för japanska och 
+  cmn för kinesiska, närmare bestämt mandarin).
+
+4.1.1 Parsing
+  Inga oavslutade html-taggar, dubletter av attribut, etc.
+
